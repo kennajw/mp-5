@@ -1,7 +1,7 @@
 import getCollection, { SHORT_COLLECTION } from "@/db";
 import { redirect, notFound } from "next/navigation";
 
-export default async function ShortUrlPage({params}: {params: {alias: string} }) {
+export default async function ShortUrlPage({params}: {params: Promise<{alias: string}> }) {
     const collection = await getCollection(SHORT_COLLECTION);
     const {alias} = await params;
     const foundAlias = await collection.findOne({alias});
@@ -11,6 +11,5 @@ export default async function ShortUrlPage({params}: {params: {alias: string} })
     }
 
     redirect(foundAlias.url);
-
     return null;
 }
