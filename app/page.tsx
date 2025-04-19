@@ -1,9 +1,9 @@
-import NewUrlAlias from "../components/NewUrlAlias";
+import NewUrl from "@/components/NewUrl";
 
 export default function Home() {
   return (
     <div>
-      <NewUrlAlias />
+      <NewUrl />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 export type AliasProps = {
-    alias?: string;
-    url?: string;
-    response: string;
+    id: string;
+    alias: string;
+    url: string;
+    short: string;
 }
