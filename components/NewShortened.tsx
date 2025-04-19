@@ -3,7 +3,7 @@ import { AliasProps } from "@/types";
 export default function NewShortened({post}: {post: AliasProps}) {
     return (
         <div>
-            <h2>Here's your shortened url!</h2>
+            <h2>Here is your shortened url!</h2>
 
             <div>
                 <p>{post.short}</p>
