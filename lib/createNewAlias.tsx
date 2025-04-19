@@ -18,6 +18,10 @@ export async function createNewAlias(url: string, alias: string): Promise<{succe
         return {success: false, error: "Uh oh! Need a URL!"};
     }
 
+    if (!validUrl(url)) {
+        return {success: false, error: "Uh oh! This url is not valid!"}
+    }
+
     try {
         const new_url = new URL(url);
 

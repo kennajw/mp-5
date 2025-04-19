@@ -1,4 +1,3 @@
-import { Button } from "@mui/joy";
 import { AliasProps } from "@/types";
 
 export default function NewShortened({post}: {post: AliasProps}) {
@@ -8,11 +7,10 @@ export default function NewShortened({post}: {post: AliasProps}) {
 
             <div>
                 <p>{post.short}</p>
-                <a href={`/${post.alias}`}
+                {/* <a href={`/${post.alias}`}
                 target="_blank"
                 rel="noopener noreferrer">
-                    <Button>Press here!</Button>
-                </a>
+                </a> */}
             </div>
         </div>
     )
