@@ -11,7 +11,7 @@ function validUrl(url: string) {
     }
 }
 export async function createNewAlias(url: string, alias: string): Promise<{success: boolean; result?: AliasProps; error?: string}> {
-    const base = "https://shorten-that-url";
+    const base = "https://mp-5-umber.vercel.app/";
     const short = `${base}/${alias}`;
 
     if (url.trim() === "" || !url) {
