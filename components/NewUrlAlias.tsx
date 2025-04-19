@@ -14,8 +14,9 @@ export default function NewUrlAlias({
     const [error, setError] = useState("");
 
     return (
-        <div>
+        <div className="flex justify-between text-center">
             <form 
+                className="p-10 justify-between m-auto"
                 onSubmit={async (e) => {
                     e.preventDefault();
                     setError("");
@@ -33,6 +34,7 @@ export default function NewUrlAlias({
                 }}
             >
                 <TextField 
+                    className="w-150 m-2"
                     value={url}
                     label="url"
                     variant="filled"
@@ -40,6 +42,7 @@ export default function NewUrlAlias({
                     required
                 />
                 <TextField 
+                    className="m-5"
                     placeholder="alias"
                     value={alias}
                     label="alias"
@@ -50,7 +53,7 @@ export default function NewUrlAlias({
                 <FormHelperText>Click to shorten that url!</FormHelperText>
 
                 <div>
-                    <Button type="submit" variant="contained">Shorten It!</Button>
+                    <Button sx={{bgcolor: "#4E3D42", color: "#E3DBDB"}} type="submit" variant="contained">Shorten It!</Button>
                     {error && (
                         <p>{error}</p>
                     )}
